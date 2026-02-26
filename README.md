@@ -16,6 +16,10 @@ Borneo Fashion Week (BFW) is the premier regional fashion digital runway, organi
     -   A floating glassmorphism sticky Navbar that transforms on-scroll for a cleaner viewport.
     -   An interactive Hamburger mobile menu drawer that reveals intuitive routing paths across all subpages (`/about`, `/designers`, `/media`, `/contact`).
 -   **Animation & Micro-Interactions**: Next-level UX integrated with `framer-motion` to handle section-by-section fade-ins, cursor-tracking 3D tilts on Designer Cards, and elegant active states for buttons and CTAs.
+-   **Search Engine Optimization (SEO)**:
+    -   Implemented a full meta-tag architecture using the Next.js Metadata API.
+    -   Tailored OpenGraph and Twitter Cards for premium social media sharing.
+    -   Semantic keyword injection and robot indexing optimization for high performance on search engines.
 
 ## 🛠️ Technology Stack
 
