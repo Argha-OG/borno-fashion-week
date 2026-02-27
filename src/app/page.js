@@ -4,9 +4,12 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
+import MovementSection from '@/components/MovementSection';
+import MovementFormModal from '@/components/MovementFormModal';
 
 export default function Home() {
   const [isMuted, setIsMuted] = React.useState(true);
+  const [isMovementModalOpen, setIsMovementModalOpen] = React.useState(false);
 
   return (
     <div className="relative">
@@ -50,11 +53,12 @@ export default function Home() {
                 </button>
               </Link>
 
-              <Link href="/contact">
-                <button className="px-8 py-4 glassmorphism text-white font-bold rounded-full border border-white/20 transition-all hover:bg-white/10 hover:border-gold/50 active:scale-95">
-                  Contact Us
-                </button>
-              </Link>
+              <button
+                onClick={() => setIsMovementModalOpen(true)}
+                className="px-8 py-4 glassmorphism text-white font-bold rounded-full border border-white/20 transition-all hover:bg-white/10 hover:border-gold/50 active:scale-95"
+              >
+                Be Part of the Movement
+              </button>
 
               <button
                 onClick={() => setIsMuted(!isMuted)}
@@ -88,6 +92,12 @@ export default function Home() {
           <div className="w-px h-12 bg-linear-to-b from-white/40 to-transparent" />
         </motion.div>
       </section>
+
+      {/* Movement Form Modal */}
+      <MovementFormModal
+        isOpen={isMovementModalOpen}
+        onClose={() => setIsMovementModalOpen(false)}
+      />
 
       {/* Section 3: Heritage & Future */}
       <section className="py-24 px-4 bg-black overflow-hidden">
@@ -321,7 +331,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 8: The Invitation (Newsletter) */}
+      {/* Section 8: The Movement */}
+      <MovementSection imageSrc="/assets/gallary/gallery-33.jpeg" />
+
+      {/* Section 9: The Invitation (Newsletter) */}
       <section className="py-32 px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
           <motion.div

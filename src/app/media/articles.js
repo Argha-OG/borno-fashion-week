@@ -22,17 +22,7 @@ export const preEventArticles = [
         "image": "https://cdn5.telesco.pe/file/NRo__lxlc3l1r1RcLetITdShEMKZU2_07UhmwWviUsB3nvNHSiKVzon6UNa94_lY8v0_My1VbPmQiN9unuQ1mJ0cA30oVgOiLKdnLf3SeQkUuydODyThjVvmbzfPvvmcZfcSTk2zKTvYM3tF6FieO9EbUDawZmAg2y2DUGXIgXqv9pgILpz7BEPcCGVOzlE6zhvOk-5uiqLfiH-MdGKP2QqDR9-t_S7YsPGFd2fqkWob1lHZ-EJS6CbghZzjKCvqZFPkRRHdfN8kzFK8uSwQPjOu-X12kqEBsApDfqYIy52aCHnFSyZGzCW0CR1_jAdcy0OcxiOu8T_Zo36u00D0pQ.jpg"
     },
     {
-        "url": "https://x.com/mynewshub/status/1971201900218548661?t=DojGCoEfFQwFKPzoeJVUMw&s=19",
-        "publisher": "X (Twitter)",
-        "title": "X Feature"
-    },
-    {
         "url": "https://www.instagram.com/p/DPB4ue2E6LW/?igsh=c2w0MGs0Ym14OHRw",
-        "publisher": "Instagram",
-        "title": "Instagram Feature"
-    },
-    {
-        "url": "https://www.instagram.com/p/DPB0a9KE847/?igsh=MXMzYnZ3ZDN2ajIw",
         "publisher": "Instagram",
         "title": "Instagram Feature"
     },
@@ -119,11 +109,6 @@ export const preEventArticles = [
         "title": "Instagram Feature"
     },
     {
-        "url": "https://x.com/mynewshub/status/1971201900218548661",
-        "publisher": "X (Twitter)",
-        "title": "X Feature"
-    },
-    {
         "url": "https://www.malaysianupdates.com/borneo-fashion-week-2025-pentas-global-fesyen-berteraskan-kelestarian-budaya/",
         "publisher": "malaysianupdates.com",
         "title": "Borneo Fashion Week 2025: Pentas Global Fesyen Berteraskan Kelestarian & Budaya MalaysianUpdates",
@@ -135,38 +120,16 @@ export const preEventArticles = [
         "title": "Instagram Feature"
     },
     {
-        "url": "https://medialahmy.com/perniagaan/borneo-fashion-week-2025-kembali-dengan-visi-global/syira/",
-        "publisher": "medialahmy.com",
-        "title": "Borneo Fashion Week 2025 Kembali Dengan Visi Global"
-    },
-    {
         "url": "https://www.wajibtonton.com/2025/09/borneo-fashion-week-2025-serlahkan.html?m=1",
         "publisher": "wajibtonton.com",
         "title": "BORNEO FASHION WEEK 2025: SERLAHKAN BAKAT PEREKA TEMPATAN KE PENTAS DUNIA",
         "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKkmjjObWDnoyJh8-IG2fU5z0Tgm7PWWmaZ2Vts_2LwJB3W1Ec5CQk00TdodYwbq5dxAUSNW5VYel4_Lxp1TaZdAkChC8N9qc-t8XWwhzO49MoXrf0Ji4tXmX95wih6PlyUS859-_N4n1tERBvXy313KDIaMDxtykDrcOWLeRhpXo2vX-ryiGi0cBIB4Og/w1200-h630-p-k-no-nu/2025%20WAJIB%20TONTON%20-%202025-09-26T173025.579.png"
     },
     {
-        "url": "https://www.max-infos.com/2025/09/26/borneo-fashion-week-2025-kembali-di-pavilion-damansara-heights-fesyen-kelestarian-warisan-borneo-disatukan/",
-        "publisher": "max-infos.com",
-        "title": "Borneo Fashion Week 2025 kembali di Pavilion Damansara Heights, fesyen, kelestarian & warisan Borneo disatukan - MaxInfo",
-        "image": "https://www.max-infos.com/wp-content/uploads/2025/09/MR2F7723-696x464.jpg"
-    },
-    {
         "url": "https://kelkatutv.com/borneo-fashion-week-2025-kembali-dengan-visi-global/",
         "publisher": "kelkatutv.com",
         "title": "Borneo Fashion Week 2025 Kembali Dengan Visi Global",
         "image": "https://klktoday.com/wp-content/uploads/2025/10/cropped-WhatsApp-Image-2025-10-22-at-9.33.54-AM.jpeg"
-    },
-    {
-        "url": "https://www.budiey.com/borneo-fashion-week-2025-angkat-identiti-budaya-ke-pentas-dunia/",
-        "publisher": "budiey.com",
-        "title": "Borneo Fashion Week 2025 Angkat Identiti Budaya Ke Pentas Dunia",
-        "image": "https://www.budiey.com/wp-content/uploads/2025/09/BORNEO.jpg"
-    },
-    {
-        "url": "https://www.facebook.com/share/v/1B9S1k41jK/?mibextid=wwXIfr",
-        "publisher": "Facebook",
-        "title": "Facebook Feature"
     },
     {
         "url": "https://murai.my/borneo-fashion-week-2025-bakal-gegar-kl-warisan-fesyen-kejutan-dunia/",
@@ -209,28 +172,14 @@ export const preEventArticles = [
         "title": "22 Pereka Fesyen Bakal Pamer Rekaan Berinspirasi Budaya Borneo (B9)",
         "image": "https://img.youtube.com/vi/yiHhpaNh65I/maxresdefault.jpg"
     },
-    {
-        "url": "https://www.instagram.com/p/DPVMJlAkjWS/?igsh=ZTRjcWYyM21ucXU3",
-        "publisher": "Instagram",
-        "title": "Instagram Feature"
-    },
+
     {
         "url": "https://www.tvsarawak.my/2025/10/03/borneo-fashion-week-2025-angkat-warisan-tekstil-fesyen-lestari/",
         "publisher": "tvsarawak.my",
         "title": "Borneo Fashion Week 2025 angkat warisan tekstil, fesyen lestari - TVS",
         "image": "https://s3.tvstv.my/wp-content/uploads/2025/10/PIXX22092025-rk-2025-10-03T105306.133.png"
     },
-    {
-        "url": "https://lifestyle.bernama.com/news.php?id=2474282",
-        "publisher": "lifestyle.bernama.com",
-        "title": "Published Article"
-    },
-    {
-        "url": "https://www.malaymail.com/news/life/2025/10/03/borneo-fashion-week-returns-after-five-year-pause-with-focus-on-heritage-and-sustainability/193239#google_vignette",
-        "publisher": "Malay Mail",
-        "title": "Borneo Fashion Week returns after five-year pause with focus on heritage and sustainability",
-        "image": "https://www.malaymail.com/malaymail/uploads/images/2025/10/03/302194.JPG"
-    },
+
     {
         "url": "https://suarasarawak.my/borneo-fashion-week-2025-angkat-warisan-tekstil-fesyen-lestari/",
         "publisher": "suarasarawak.my",
@@ -241,12 +190,6 @@ export const preEventArticles = [
         "url": "https://www.instagram.com/p/DPVVRR5D5DT/?igsh=cnlocHR3NzJ6MG1u",
         "publisher": "Instagram",
         "title": "Instagram Feature"
-    },
-    {
-        "url": "https://utusansarawak.com.my/borneo-fashion-week-2025-angkat-warisan-tekstil-fesyen-lestari/",
-        "publisher": "utusansarawak.com.my",
-        "title": "Borneo Fashion Week 2025 angkat warisan tekstil, fesyen lestari - UTUSAN SARAWAK",
-        "image": "https://utusansarawak.com.my/wp-content/uploads/2025/10/FW1512728_KL07_03102025_FASHION_BORNEO-2-1000x667.jpg"
     },
     {
         "url": "https://www.tiktok.com/@utusansarawak/video/7556827013097606418",
@@ -265,39 +208,14 @@ export const preEventArticles = [
         "publisher": "Facebook",
         "title": "Facebook Feature"
     },
-    {
-        "url": "https://x-press.my/?p=13693",
-        "publisher": "x-press.my",
-        "title": "Borneo Fashion Week 2025 tampil dengan tema ‘Fashion With Purpose’ - X-press Malaysia",
-        "image": "https://x-press.my/wp-content/uploads/2025/09/borneofashion.jpeg"
-    },
+
     {
         "url": "https://www.7klik.com/2025/10/borneo-fashion-week-2025-tradisi-borneo.html",
         "publisher": "7klik.com",
         "title": " Borneo Fashion Week 2025 - Tradisi Borneo, Aura Global",
         "image": "https://blogger.googleusercontent.com/img/a/AVvXsEiIrHit8H5hnYovdIpqYsBaAzR_6900RA5NQsf6LP-VJmBGvrXMu7vOhcLv_tjMpqvDxlV6-pFtWJzQlka04bfwVFDfwXdNTNcQrQVJW8t1omR7Szhtn20GaZ5K70M6RnBfRkf8IrLqj71lFt9nDEplnDCRwG00K0Kd0gZiK_bxAaR-BFxl12hsAw_CB_8=w1200-h630-p-k-no-nu"
     },
-    {
-        "url": "https://www.reddit.com/r/nasikatok/comments/1nxnur9/borneo_fashion_week_returns_to_kl_with_heritage/",
-        "publisher": "reddit.com",
-        "title": "Reddit - The heart of the internet"
-    },
-    {
-        "url": "https://www.utusanborneo.com.my/2025/10/03/borneo-fashion-week-2025-angkat-warisan-tekstil-fesyen-lestari",
-        "publisher": "utusanborneo.com.my",
-        "title": "Borneo Fashion Week 2025 angkat warisan tekstil, fesyen lestari",
-        "image": "https://www.utusanborneo.com.my/sites/default/files/images/article/20251003/fw1512726kl0503102025fashionborneo-lpr.jpg"
-    },
-    {
-        "url": "https://www.pressreader.com/malaysia/utusan-borneo-sarawak/20251005/281865829661149?srsltid=AfmBOorTk3HERpnHRLZwQXzynt_5yTl0JK9qWTI4brJ0kGRGnAQgp2zn",
-        "publisher": "pressreader.com",
-        "title": "Published Article"
-    },
-    {
-        "url": "https://ladybosz.com/2025/10/06/borneo-fashion-week-adalah-platform-penceritaan-kelestarian-dan-warisan-budaya/",
-        "publisher": "ladybosz.com",
-        "title": "Borneo Fashion Week Adalah Platform Penceritaan Kelestarian Dan Warisan Budaya"
-    },
+
     {
         "url": "https://www.instagram.com/p/DPLlwLiCdXp/?igsh=bmcza21wbjl3dmNn",
         "publisher": "Instagram",
@@ -408,11 +326,7 @@ export const preEventArticles = [
         "publisher": "Instagram",
         "title": "Instagram Feature"
     },
-    {
-        "url": "https://www.instagram.com/p/DPqV5OLEjO",
-        "publisher": "Instagram",
-        "title": "Instagram Feature"
-    },
+
     {
         "url": "https://www.instagram.com/p/DPqXTZvEocU/",
         "publisher": "Instagram",
@@ -448,16 +362,7 @@ export const preEventArticles = [
         "publisher": "Instagram",
         "title": "Instagram Feature"
     },
-    {
-        "url": "https://lifestyle.bernama.com/news-en.php?id=2477818",
-        "publisher": "lifestyle.bernama.com",
-        "title": "Published Article"
-    },
-    {
-        "url": "https://mypermohonan.com/borneo-fashion-week-2025-shines-bright-with-culture-and-couture/",
-        "publisher": "mypermohonan.com",
-        "title": "Borneo Fashion Week 2025 Shines Bright With Culture And Couture"
-    },
+
     {
         "url": "https://siakapkeli.my/2025/10/13/borneo-fashion-week-2025-berlangsung-dengan-penuh-meriah/",
         "publisher": "siakapkeli.my",
@@ -477,25 +382,9 @@ export const preEventArticles = [
         "image": "https://files.cdn-files-a.com/uploads/9391516/800_68ec7270586db.jpg"
     },
     {
-        "url": "https://t.me/mynewshubviral/35228",
-        "publisher": "Telegram",
-        "title": "Mynewshub",
-        "image": "https://cdn5.telesco.pe/file/ecKWbI-tayhxv0gbDYunvc_Z7BuG0wSSBwcaJZPn8jlMfgZtzVId8xkNbteUtIntvXJZPVVaMmB81-FW2TS4CNpAqndKG8AMPPuFPoAu-nRgCLAowAOh048crrRICv7p8eti2n1REqjBe-kvbCU8sc9UVh9CMN-NXEJqihT-8LLoKX7qQi9nY1xKYDLxiHqJ6pjnZ6ksjmj1o5_UftLRfea9rzWyKdHuSZaBAOoBJ5KloABev07OhAwNoVvwJrmOk9rB9RBZ-jGuv-Q0NGaDGV6_3AH4cpr-sJCj-r8-2-Y758bY6KpLUDboueUInXWNqgncW36M2SwJIPHamDIvAQ.jpg"
-    },
-    {
         "url": "https://www.instagram.com/p/DPvGdxFEvzC/?igsh=MXRnNzc4czZzanM1YQ==",
         "publisher": "Instagram",
         "title": "Instagram Feature"
-    },
-    {
-        "url": "https://www.facebook.com/share/p/1JzkfJVHuu/",
-        "publisher": "Facebook",
-        "title": "Facebook Feature"
-    },
-    {
-        "url": "https://www.facebook.com/247xMedia/posts/",
-        "publisher": "Facebook",
-        "title": "Facebook Feature"
     },
     {
         "url": "https://sabahnews.com.my/borneo-fashion-week-2025-angkat-warisan-borneo-dan-kelestarian-fesyen-moden/",
@@ -528,11 +417,6 @@ export const preEventArticles = [
         "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjandxoFsVmejAscg_AcaNEiN6g93LAVrcRn9UGdFj-gIjpJL_Wsqm2skSlM3lI7HLH4VINQ14XgzRxW9Cct5hFcD_0PjvKn1tNF5xpYJaZctm26a05IsaTGDLwAB6d3tq2oJLpFs7kFyR9Rkcd4_yCPLRgD6EA-VQhuRSDR5_IDAQbqeGp-_pIXxj1eWQ/w1200-h630-p-k-no-nu/MR2F3428.jpeg"
     },
     {
-        "url": "https://www.facebook.com/share/p/1BP4AUya1g/",
-        "publisher": "Facebook",
-        "title": "Facebook Feature"
-    },
-    {
         "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2025/10/13/bisaya-inspired-outfits-shine-at-borneo-fashion-week-2025-as-the-event-dazzles-with-style-and-soul",
         "publisher": "The Star",
         "title": "Bisaya-inspired outfits shine at Borneo Fashion Week 2025 as the event dazzles with style and soul",
@@ -543,16 +427,6 @@ export const preEventArticles = [
         "publisher": "mdaily.co",
         "title": "BFW 2025 “Fashion With Purpose” Tutup Tirai Dengan Penuh Gemilang",
         "image": "https://mdaily.gerbangcdn.com/wp-content/uploads/2025/10/13232412/MR2F9473.jpg"
-    },
-    {
-        "url": "https://medialahmy.com/perniagaan/borneo-fashion-week-2025-berlangsung-dengan-penuh-meriah/syira/",
-        "publisher": "medialahmy.com",
-        "title": "Borneo Fashion Week 2025 Berlangsung Dengan Penuh Meriah"
-    },
-    {
-        "url": "https://newswav.com/article/borneo-fashion-week-2025-where-style-meets-soul-A2510_kgsW9U",
-        "publisher": "newswav.com",
-        "title": "Borneo Fashion Week 2025 Where Style Meets Soul A2510_kgsw9u"
     },
     {
         "url": "https://www.kopiplanet.com/bfw-2025-bertemakan-fashion-with-purpose-angkat-warisan-borneo-kelestarian-keindahan-rekaan/",
@@ -573,16 +447,6 @@ export const preEventArticles = [
         "image": "https://destina.my/wp-content/uploads/2025/10/rsz_1mr2f2180_1.jpg"
     },
     {
-        "url": "https://www.redtomato.com.my/video/38506.html",
-        "publisher": "redtomato.com.my",
-        "title": "BORNEO FASHION WEEK 2025 DAZZLES WITH STYLE & SOUL"
-    },
-    {
-        "url": "https://thesun-ipaper.cld.bz/20251013/6/",
-        "publisher": "thesun-ipaper.cld.bz",
-        "title": "Published Article"
-    },
-    {
         "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2025/10/14/borneo-fashion-week-2025-dazzles-the-crowd-with-an-innovative-display-and-style-from-south-east-asia",
         "publisher": "The Star",
         "title": "Borneo Fashion Week 2025 dazzles the crowd with an innovative display and style from South-East Asia",
@@ -593,11 +457,6 @@ export const preEventArticles = [
         "publisher": "utusan.com.my",
         "title": "Borneo Fashion Week 2025 Angkat Warisan dan Kelestarian Fesyen Borneo",
         "image": "http://www.utusan.com.my/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-15-at-11.28.46-AM.jpeg"
-    },
-    {
-        "url": "#",
-        "publisher": "TV3",
-        "title": "NONA TV3- TX 2 November 2pm"
     },
     {
         "url": "https://www.instagram.com/p/DP0Xc-vAMOG/?igsh=MXBsbGlnb2o1YXA3YQ==",
@@ -615,11 +474,6 @@ export const preEventArticles = [
         "publisher": "ohbulan.com",
         "title": "'Borneo Fashion Week' Kekalkan Kelestarian Rekaan",
         "image": "https://asset.ohbulan.com/2025/10/borneo-221.jpg"
-    },
-    {
-        "url": "https://www.facebook.com/sarawaktribune/posts/edgy-meets-earth-nasha-prive-wins-big-at-borneo-fashion-week-2025kuching-born-de/1581810466451747/",
-        "publisher": "Facebook",
-        "title": "Facebook Feature"
     },
     {
         "url": "https://www.sarawaktribune.com/edgy-meets-earth-nasha-prive-wins-big-at-borneo-fashion-week-2025/",
@@ -644,16 +498,6 @@ export const preEventArticles = [
         "publisher": "The Star",
         "title": "Celeb stylist Saerah R. Kunjan wins Green Thread Award at Borneo Fashion Week",
         "image": "https://apicms.thestar.com.my/uploads/images/2025/10/16/3573428.png"
-    },
-    {
-        "url": "https://babab.net/artikel/borneo-fashion-week-2025-berlangsung-dengan-penuh-meriah.html",
-        "publisher": "babab.net",
-        "title": "Borneo Fashion Week 2025 Berlangsung Dengan Penuh Meriah.html"
-    },
-    {
-        "url": "https://vt.tiktok.com/ZSUxPVFup/",
-        "publisher": "TikTok",
-        "title": "TikTok Feature"
     },
     {
         "url": "https://www.instagram.com/reel/DQN8BISCRYr/?igsh=cWI4YTR1OWVxNjc3",

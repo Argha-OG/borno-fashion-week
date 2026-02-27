@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import MovementSection from '@/components/MovementSection';
 
 const AboutPage = () => {
     return (
@@ -132,6 +133,8 @@ const AboutPage = () => {
                     ))}
                 </div>
             </section>
+
+            <MovementSection imageSrc="/assets/gallary/gallery-31.jpeg" />
         </div>
     );
 };

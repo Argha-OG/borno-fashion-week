@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Play, ExternalLink, Facebook, Instagram, X } from 'lucide-react';
 import { preEventArticles } from './articles';
 import Pagination from '@/components/Pagination';
+import MovementSection from '@/components/MovementSection';
 
 const MediaPage = () => {
     const videos = [
@@ -386,6 +387,9 @@ const MediaPage = () => {
                     onPageChange={handleGalleryPageChange}
                 />
             </section>
+
+            {/* Section: The Movement */}
+            <MovementSection imageSrc="/assets/gallary/gallery-42.jpeg" />
 
             {/* Lightbox Modal */}
             <AnimatePresence>

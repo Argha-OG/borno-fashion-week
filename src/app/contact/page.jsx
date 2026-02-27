@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, MapPin, Instagram, Facebook, CheckCircle2 } from 'lucide-react';
+import MovementSection from '@/components/MovementSection';
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -215,6 +216,9 @@ const ContactPage = () => {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gold/5 blur-[100px] rounded-full pointer-events-none z-0" />
                 </motion.div>
             </div>
+
+            {/* The Movement Section */}
+            <MovementSection imageSrc="/assets/gallary/gallery-50.jpeg" />
         </div>
     );
 };

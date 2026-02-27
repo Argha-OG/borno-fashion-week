@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import MovementSection from '@/components/MovementSection';
 
 const DesignerCard = ({ designer, isPlaceholder = false }) => {
     const x = useMotionValue(0);
@@ -107,14 +108,22 @@ const DesignersPage = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="space-y-4"
+                    className="space-y-6 px-4"
                 >
-                    <h1 className="text-5xl md:text-8xl font-bold text-white tracking-tighter">
-                        THE <span className="text-gold italic">TALENT</span>
+                    <h1 className="text-5xl md:text-8xl font-bold text-white tracking-tighter uppercase">
+                        Designers
                     </h1>
-                    <p className="text-white/40 max-w-xl mx-auto uppercase tracking-widest text-sm">
-                        Discover the visionary designers of Borneo Fashion Week
+                    <p className="text-gold italic text-xl md:text-2xl max-w-xl mx-auto tracking-widest font-serif mb-8">
+                        Where Visionaries Become Icons
                     </p>
+                    <div className="text-white/70 max-w-3xl mx-auto space-y-6 text-lg md:text-xl font-light leading-relaxed">
+                        <p>
+                            At Borneo Fashion Week, we celebrate the bold, the visionary, and the unapologetically creative. Our runway is a platform where emerging talents and established designers stand side by side united by innovation, craftsmanship, and the spirit of Borneo.
+                        </p>
+                        <p>
+                            Whether you are launching your first collection or unveiling your latest masterpiece, Borneo Fashion Week offers you more than just a runway. We offer visibility, credibility, and global opportunity.
+                        </p>
+                    </div>
                 </motion.div>
             </section>
 
@@ -152,19 +161,7 @@ const DesignersPage = () => {
             </div>
 
             {/* Designer Call to Action */}
-            <motion.section
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                className="mt-32 p-12 glassmorphism rounded-[3rem] text-center border-gold/10"
-            >
-                <h2 className="text-3xl font-bold text-white mb-6">Are you the next ASEAN icon?</h2>
-                <p className="text-white/60 max-w-xl mx-auto mb-8">
-                    Applications for the next showcase are now open for emerging and established designers.
-                </p>
-                <button className="px-10 py-4 bg-gold text-black font-bold rounded-full hover:scale-105 transition-all">
-                    Register as a Designer
-                </button>
-            </motion.section>
+            <MovementSection imageSrc="/assets/gallary/gallery-30.jpeg" />
         </div>
     );
 };
