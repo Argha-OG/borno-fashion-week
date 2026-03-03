@@ -33,7 +33,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-[0.3em] uppercase border border-gold/30 text-gold glassmorphism rounded-full">
+            <span className="inline-block px-4 py-1 mb-10 text-xs font-bold tracking-[0.3em] uppercase border border-gold/30 text-gold glassmorphism rounded-full">
               Annual Event • Borneo
             </span>
             <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-white mb-8 leading-none uppercase">
