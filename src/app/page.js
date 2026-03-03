@@ -36,9 +36,9 @@ export default function Home() {
             <span className="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-[0.3em] uppercase border border-gold/30 text-gold glassmorphism rounded-full">
               Annual Event • Borneo
             </span>
-            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-white mb-8 leading-none">
-              THE DIGITAL <br />
-              <span className="text-gold italic">RUNWAY</span>
+            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-white mb-8 leading-none uppercase">
+              Bringing Borneo <br />
+              <span className="text-gold italic">to the World</span>
             </h1>
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
               Experience the fusion of Borneo's cultural heritage and ASEAN's high-fashion future. A leading regional platform for the next generation of creative talent.
@@ -289,7 +289,7 @@ export default function Home() {
               { q: "How can I attend Borneo Fashion Week?", a: "BFW is a curated experience. Register your interest through our contact portal for invitation-only access to our main runway events." },
               { q: "Where is the main venue located?", a: "Our anniversary edition transforms the cultural landmarks of Borneo into high-fashion canvases. Specific venue details are shared exclusively with confirmed guests." },
               { q: "Are the collections available for purchase?", a: "Yes, BFW facilitates direct connections between designers and international buyers. Private viewing appointments can be scheduled post-show." },
-              { q: "How do designers apply for the next season?", a: "Emerging talent can submit their portfolio through our ASEAN creative network link. Selection is based on innovation and cultural storytelling." },
+              { q: "Ready to own the runway?", a: "Emerging or established, this is your moment. To register for the next season of Borneo Fashion Week, simply email us your portfolio or WhatsApp our team to begin the conversation.\n\nNo gatekeeping. No limits. Just bold fashion." },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -320,13 +320,49 @@ export default function Home() {
           <div className="text-center mb-12">
             <span className="text-white/20 text-xs font-bold tracking-[0.4em] uppercase">Supported By</span>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 hover:opacity-100 transition-opacity duration-1000">
-            {/* Note: In production, replace with actual partner logos */}
-            <div className="text-2xl font-black tracking-tighter text-white italic">VOGUE</div>
-            <div className="text-2xl font-black tracking-tighter text-white italic">HARPER'S</div>
-            <div className="text-2xl font-black tracking-tighter text-white italic">ELLE</div>
-            <div className="text-2xl font-black tracking-tighter text-white italic">TATLER</div>
-            <div className="text-2xl font-black tracking-tighter text-white italic">BAZAAR</div>
+          <div className="marquee-container">
+            <div className="marquee-content opacity-80 hover:opacity-100 transition-all duration-500">
+              {[...Array(2)].map((_, i) => (
+                <React.Fragment key={i}>
+                  {[
+                    { type: 'image', url: 'https://upload.wikimedia.org/wikipedia/commons/7/79/Coat_of_arms_of_Sarawak.svg', alt: 'Sarawak Coat of Arms' },
+                    { type: 'image', url: 'https://www.simplyborneo.com/wp-content/uploads/2023/03/Tourism-Malaysia-Logo.png', alt: 'Tourism Malaysia' },
+                    { type: 'image', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/1280px-AirAsia_New_Logo.svg.png', alt: 'AirAsia' },
+                    { type: 'image', url: 'https://static.wikia.nocookie.net/staypedia/images/9/9a/Ibis_Styles_2011.png/revision/latest/scale-to-width-down/1200?cb=20200214191600', alt: 'Ibis Styles' },
+                    { type: 'image', url: 'https://iwwce-temp.com/wp-content/uploads/2024/05/91.png', alt: 'IWWCE' },
+                    { type: 'image', url: 'https://myweekendplan.asia/wp-content/uploads/2022/11/Mai-Yai-Thai-Orchid-Restaurant-1024x1024.jpg', alt: 'Mai Yai Thai Orchid Restaurant' },
+                    { type: 'image', url: 'https://upload.wikimedia.org/wikipedia/commons/e/e8/EtihadAirways-AbuDhabi-MasterLogo-Eng.jpg', alt: 'Etihad Airways' },
+                    { type: 'image', url: 'https://cdn.freebiesupply.com/logos/large/2x/thalgo-logo-svg-vector.svg', alt: 'Thalgo' },
+                    { type: 'image', url: 'https://logoeps.com/wp-content/uploads/2025/02/Chivas-Regal-logo.png', alt: 'Chivas Regal' },
+                    { type: 'image', url: 'https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/gtzzlpsetwgsdwa8rzjk?ik-sanitizeSvg=true', alt: 'Partner Logo 10' },
+                    { type: 'text', content: 'GEBRIEL PADAN' },
+                    { type: 'image', url: 'https://cdn.tasteatlas.com//images/productmakers/3dd7ed8e1bae4aeeaab5598d6a5b1152.png?w=700&h=656', alt: 'TasteAtlas Partner' },
+                    { type: 'image', url: 'https://www.yummseng.com/image/prismkai/image/data/brand/NZJskpkf1621535661.png', alt: 'Yumm Seng' },
+                    { type: 'image', url: 'https://www.finsourcemedia.com/wp-content/uploads/2024/11/k2.jpg', alt: 'Finsource Media' },
+                    { type: 'image', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/3840px-BMW.svg.png', alt: 'BMW' },
+                    { type: 'image', url: 'https://play-lh.googleusercontent.com/6nGzerPr_kSsQmmNyltRQf4WsbP7qfuTekIIb1UG8OFL3oDZDVOXoZYhT2Xs4koAsJw=w600-h300-pc0xffffff-pd', alt: 'Google Play Partner' },
+                    { type: 'image', url: 'https://down-my.img_susercontent.com/file/my-11134207-7rase-mdcv38d7036t63', alt: 'Shopee Partner' },
+                    { type: 'image', url: 'https://lh3.googleusercontent.com/jWsMGr5FEXpq-wsQi00XBb_P9A-v107pvlQQ-GLFxAIKH1grxbCJ0m1t6mD3aJYZ5YElYGj8U7nQ9NYEs4TBYPLtVbtWL30fpE3G6wqzgcM=s300', alt: 'Partner Logo 18' },
+                    { type: 'image', url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Kiehl's_logo.svg/1280px-Kiehl's_logo.svg.png", alt: "Kiehl's" },
+                    { type: 'image', url: 'https://www.itb-asia.com/wp-content/uploads/2025/07/borneo-talk-logo-resized-1000x471.png', alt: 'Borneo Talk' },
+                  ].map((partner, idx) => (
+                    <div key={`${i}-${idx}`} className="flex items-center justify-center h-16 sm:h-20 w-32 sm:w-48 p-2 shrink-0">
+                      {partner.type === 'image' ? (
+                        <img
+                          src={partner.url}
+                          alt={partner.alt}
+                          className="max-h-full max-w-full object-contain"
+                        />
+                      ) : (
+                        <span className="text-white font-bold text-center leading-tight tracking-tighter whitespace-nowrap text-sm sm:text-lg">
+                          {partner.content}
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </section>

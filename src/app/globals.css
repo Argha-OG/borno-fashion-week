@@ -116,3 +116,39 @@ body::before {
     opacity: 1;
   }
 }
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem;
+  padding: 2rem 0;
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent);
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 4rem;
+  min-width: 100%;
+  animation: marquee 60s linear infinite;
+  align-items: center;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}

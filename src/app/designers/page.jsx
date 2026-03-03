@@ -88,15 +88,15 @@ const DesignersPage = () => {
     // Mock data for Phase 1 Demo
     const featuredDesigners = [
         {
-            name: "Ariff S.",
+            name: "December Teo",
             country: "Malaysia",
             bio: "Fusing traditional batik with modern silhouettes.",
             image: "/assets/gallary/gallery-15.jpeg"
         },
         {
-            name: "Linh Tran",
-            country: "Vietnam",
-            bio: "Sustainable luxury made from recycled ASEAN textiles.",
+            name: "PENAN bags",
+            country: "Malaysia",
+            bio: "Authentic craftsmanship with a modern twist.",
             image: "/assets/gallary/gallery-60.jpeg"
         }
     ];

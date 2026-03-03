@@ -5,11 +5,11 @@ import PageTransition from "@/components/PageTransition";
 
 export const metadata = {
   title: {
-    default: "Borneo Fashion Week | Digital Runway",
+    default: "Borneo Fashion Week | Bringing Borneo to the World",
     template: "%s | Borneo Fashion Week"
   },
   description: "A leading regional fashion platform by OneMediaGroup, connecting ASEAN designers to the global market. Celebrating the heritage and innovation of Borneo fashion.",
-  keywords: ["Borneo Fashion Week", "BFW", "ASEAN Fashion", "Digital Runway", "Malaysian Designers", "Cultural Heritage", "Couture", "Fashion Event"],
+  keywords: ["Borneo Fashion Week", "BFW", "ASEAN Fashion", "Bringing Borneo to the World", "Malaysian Designers", "Cultural Heritage", "Couture", "Fashion Event"],
   authors: [{ name: "OneMediaGroup" }],
   creator: "OneMediaGroup",
   publisher: "OneMediaGroup",
@@ -23,7 +23,7 @@ export const metadata = {
     apple: '/bfw-logo.svg',
   },
   openGraph: {
-    title: "Borneo Fashion Week | Digital Runway",
+    title: "Borneo Fashion Week | Bringing Borneo to the World",
     description: "Connecting ASEAN designers to the global market. A leading regional fashion platform.",
     url: 'https://borneofashionweek.com', // Placeholder URL
     siteName: 'Borneo Fashion Week',
@@ -40,7 +40,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Borneo Fashion Week | Digital Runway",
+    title: "Borneo Fashion Week | Bringing Borneo to the World",
     description: "Connecting ASEAN designers to the global market.",
     images: ['/fwb.png'],
   },

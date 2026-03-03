@@ -9,9 +9,36 @@ import MovementSection from '@/components/MovementSection';
 
 const MediaPage = () => {
     const videos = [
-        { id: 'promo-anniversary', title: 'The Anniversary Promo', year: '2026', url: 'https://www.youtube.com/embed/J9OEkr06zys' },
-        { id: 'designer-showcase', title: 'Designer Showcase', year: '2026', url: 'https://www.youtube.com/embed/NDA3-alJIhI' },
-        { id: 'runway-moments', title: 'Runway Moments', year: '2026', url: '/assets/videos/runway-moments.mp4', isLocal: true },
+        {
+            id: 'borneo-2025-reel',
+            title: 'Borneo 2025 | Highlight Reel',
+            year: '2025',
+            url: '/assets/videos/borneo2025.mp4',
+            isLocal: true,
+            type: 'reel'
+        },
+        {
+            id: 'promo-anniversary',
+            title: 'The Anniversary Promo',
+            year: '2018',
+            url: 'https://www.youtube.com/embed/J9OEkr06zys',
+            type: 'landscape'
+        },
+        {
+            id: 'designer-showcase',
+            title: 'Designer Showcase',
+            year: '2017',
+            url: 'https://www.youtube.com/embed/NDA3-alJIhI',
+            type: 'landscape'
+        },
+        {
+            id: 'runway-moments',
+            title: 'Runway Moments',
+            year: '',
+            url: '/assets/videos/runway-moments.mp4',
+            isLocal: true,
+            type: 'landscape'
+        },
     ];
 
     // Real assets from public/assets/gallary
@@ -206,70 +233,72 @@ const MediaPage = () => {
                 </motion.div>
             </section>
 
-            {/* Video Section */}
+            {/* Video Section: Bento Grid */}
             <section className="mb-32">
-                <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-gold pl-4 uppercase tracking-wider">Cinematic Archives</h2>
+                <h2 className="text-2xl font-bold text-white mb-12 border-l-4 border-gold pl-4 uppercase tracking-wider">Cinematic Archives</h2>
 
-                {/* Video Carousel Removed for traditional grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {/* Featured Video First */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="lg:col-span-2 relative aspect-video rounded-4xl overflow-hidden glassmorphism border-gold/10 group"
-                    >
-                        <iframe
-                            src={videos[0].url}
-                            title={videos[0].title}
-                            className="w-full h-full brightness-90 group-hover:brightness-100 transition-all duration-700"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allowFullScreen
-                        />
-                        <div className="absolute top-8 left-8 p-4 glassmorphism rounded-2xl pointer-events-none group-hover:opacity-0 transition-opacity">
-                            <span className="text-gold text-xs font-bold tracking-widest uppercase">{videos[0].year}</span>
-                            <h3 className="text-2xl font-bold text-white">{videos[0].title}</h3>
-                        </div>
-                    </motion.div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {videos.map((video, idx) => {
+                        const isReel = video.type === 'reel';
+                        const spanClass = isReel
+                            ? "lg:row-span-2 lg:col-span-1"
+                            : idx === 1
+                                ? "lg:col-span-2"
+                                : "lg:col-span-1";
 
-                    {/* Secondary Videos */}
-                    {videos.slice(1).map((video, idx) => (
-                        <motion.div
-                            key={video.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.2 }}
-                            className="relative aspect-video rounded-3xl overflow-hidden glassmorphism border-gold/5 group"
-                        >
-                            {video.isLocal ? (
-                                <video
-                                    src={video.url}
-                                    title={video.title}
-                                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500"
-                                    muted
-                                    loop
-                                    playsInline
-                                    controls
-                                />
-                            ) : (
-                                <iframe
-                                    src={video.url}
-                                    title={video.title}
-                                    className="w-full h-full opacity-90 group-hover:opacity-100 transition-all duration-500"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerPolicy="strict-origin-when-cross-origin"
-                                    allowFullScreen
-                                />
-                            )}
-                            <div className="absolute bottom-6 left-6 group-hover:opacity-0 transition-opacity bg-black/40 backdrop-blur-sm px-3 py-1 rounded-lg">
-                                <h4 className="text-white text-sm font-bold">{video.title}</h4>
-                            </div>
-                        </motion.div>
-                    ))}
+                        return (
+                            <motion.div
+                                key={video.id}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.1 }}
+                                className={`relative rounded-3xl overflow-hidden glassmorphism border-white/5 group shadow-2xl ${spanClass}`}
+                            >
+                                <div className={`${isReel ? "aspect-9/16" : "aspect-video"} w-full h-full`}>
+                                    {video.isLocal ? (
+                                        <video
+                                            src={video.url}
+                                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                            muted
+                                            loop
+                                            playsInline
+                                            controls={!isReel}
+                                            autoPlay={isReel}
+                                        />
+                                    ) : (
+                                        <iframe
+                                            src={video.url}
+                                            title={video.title}
+                                            className="w-full h-full opacity-80 group-hover:opacity-100 transition-all duration-500"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allowFullScreen
+                                        />
+                                    )}
+                                </div>
+
+
+                                {/* Overlay */}
+                                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none text-left">
+                                    <div className="absolute bottom-6 left-6 right-6">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="text-gold text-[10px] font-bold tracking-[0.3em] uppercase">{video.year}</span>
+                                            {isReel && <span className="px-2 py-0.5 rounded-full bg-gold/20 text-gold text-[8px] font-bold uppercase tracking-widest border border-gold/30">Reel</span>}
+                                        </div>
+                                        <h4 className="text-white text-lg font-bold tracking-tight leading-tight">{video.title}</h4>
+                                    </div>
+                                </div>
+
+                                {isReel && (
+                                    <div className="absolute top-6 right-6 p-3 rounded-full glassmorphism text-white/50 group-hover:text-gold transition-colors">
+                                        <Play size={16} fill="currentColor" />
+                                    </div>
+                                )}
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </section>
 

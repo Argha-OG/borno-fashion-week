@@ -37,8 +37,9 @@ const Navbar = () => {
               alt="Borneo Fashion Week Logo"
               className={`transition-all duration-300 object-contain ${scrolled ? 'h-8' : 'h-10 sm:h-12'}`}
             />
-            <span className="text-xl sm:text-2xl font-bold tracking-tighter text-gold">
-              Borneo <span className="text-white text-xl hidden sm:inline-block">Fashion Week</span>
+            <span className="font-bold tracking-tighter leading-none flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+              <span className="text-gold text-lg sm:text-2xl">Borneo</span>
+              <span className="text-white text-[10px] sm:text-xl uppercase sm:normal-case">Fashion Week</span>
             </span>
           </Link>
 
