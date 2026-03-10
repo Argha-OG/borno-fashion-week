@@ -3,13 +3,48 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, CheckCircle2, Loader2 } from 'lucide-react';
 import MovementSection from '@/components/MovementSection';
 import MovementFormModal from '@/components/MovementFormModal';
 
 export default function Home() {
   const [isMuted, setIsMuted] = React.useState(true);
   const [isMovementModalOpen, setIsMovementModalOpen] = React.useState(false);
+  const [newsletterEmail, setNewsletterEmail] = React.useState('');
+  const [isSubmittingNewsletter, setIsSubmittingNewsletter] = React.useState(false);
+  const [newsletterStatus, setNewsletterStatus] = React.useState(null);
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmittingNewsletter(true);
+    setNewsletterStatus(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: 'Newsletter Subscriber',
+          email: newsletterEmail,
+          phone: 'N/A',
+          message: 'Newsletter subscription application.'
+        }),
+      });
+
+      if (response.ok) {
+        setNewsletterStatus('success');
+        setNewsletterEmail('');
+      } else {
+        const data = await response.json();
+        setNewsletterStatus(data.error || 'error');
+      }
+    } catch (err) {
+      console.error('Newsletter error:', err);
+      setNewsletterStatus('Connection error.');
+    } finally {
+      setIsSubmittingNewsletter(false);
+    }
+  };
 
   return (
     <div className="relative">
@@ -144,6 +179,80 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
+      </section>
+
+      {/* 2026 Upcoming Edition Preview Section */}
+      <section className="py-32 px-4 relative overflow-hidden bg-white/[0.02]">
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-gold/30 to-transparent" />
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <span className="text-gold text-xs font-bold tracking-[0.4em] uppercase">The Future of Fashion</span>
+              <h2 className="text-5xl md:text-8xl font-bold text-white tracking-tighter leading-none uppercase">
+                UPCOMING <br />
+                <span className="text-gold italic">EDITION 2026</span>
+              </h2>
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="text-white/40 max-w-md text-sm md:text-base leading-relaxed uppercase tracking-widest border-l border-gold/20 pl-6"
+            >
+              A DECADE OF EXCELLENCE. PREPARING TO SHOWCASE THE FUTURE OF BORNESIAN COUTURE ON THE GLOBAL STAGE.
+            </motion.p>
+          </div>
+
+          <div className="columns-1 md:columns-2 gap-8 space-y-8">
+            {[1, 2, 3, 4].map((num) => (
+              <motion.div
+                key={num}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: num * 0.1, duration: 0.8 }}
+                className="break-inside-avoid"
+              >
+                <div className="group relative rounded-[2rem] overflow-hidden border border-white/10 glassmorphism transition-all duration-500 hover:border-gold/30">
+                  <img
+                    src={`/assets/promo/promoimage${num}.jpeg`}
+                    alt={`Promotional Image ${num}`}
+                    className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity" />
+                  <div className="absolute top-6 right-6 px-4 py-1 glassmorphism border-white/10 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <span className="text-gold text-[10px] uppercase tracking-widest font-bold">2026 Preview</span>
+                  </div>
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="w-0 group-hover:w-full h-px bg-gold/50 transition-all duration-700 mb-4" />
+                    <p className="text-white/40 text-[10px] uppercase tracking-[0.4em] font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">BFW Anniversary</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.8 }}
+            className="mt-24 text-center"
+          >
+            <div className="inline-flex items-center gap-6 text-white/10">
+              <div className="h-px w-24 bg-white/5" />
+              <span className="text-[10px] uppercase tracking-[0.8em] font-bold text-white/30">Born to Be Bold</span>
+              <div className="h-px w-24 bg-white/5" />
+            </div>
+          </motion.div>
+        </div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-gold/30 to-transparent" />
       </section>
 
       {/* Section 4: Featured Collections */}
@@ -386,17 +495,48 @@ export default function Home() {
               </p>
             </div>
 
-            <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                placeholder="Excellence@fashion.com"
-                className="flex-1 bg-white/5 border border-white/10 rounded-full px-8 py-4 text-white focus:outline-none focus:border-gold transition-colors"
-                required
-              />
-              <button type="submit" className="px-10 py-4 bg-gold text-black font-bold rounded-full hover:scale-105 transition-transform">
-                Apply
-              </button>
-            </form>
+            {newsletterStatus === 'success' ? (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-center space-y-4"
+              >
+                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto border border-gold/20">
+                  <CheckCircle2 className="text-gold" size={32} />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Welcome to the Inner Circle</h3>
+                <p className="text-white/60">Success! You've been added to our exclusive list.</p>
+                <button
+                  onClick={() => setNewsletterStatus(null)}
+                  className="text-gold hover:underline text-sm"
+                >
+                  Join with another email
+                </button>
+              </motion.div>
+            ) : (
+              <>
+                <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                  <input
+                    type="email"
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    placeholder="Excellence@fashion.com"
+                    className="flex-1 bg-white/5 border border-white/10 rounded-full px-8 py-4 text-white focus:outline-none focus:border-gold transition-colors"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    disabled={isSubmittingNewsletter}
+                    className="px-10 py-4 bg-gold text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                  >
+                    {isSubmittingNewsletter ? <Loader2 className="animate-spin" size={20} /> : "Apply"}
+                  </button>
+                </form>
+                {newsletterStatus && newsletterStatus !== 'success' && (
+                  <p className="text-red-500 text-sm mt-4">{newsletterStatus}</p>
+                )}
+              </>
+            )}
 
             <p className="text-[10px] text-white/20 uppercase tracking-widest font-bold">
               Secure Connection &bull; Privacy Guaranteed

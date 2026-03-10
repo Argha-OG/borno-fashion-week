@@ -38,16 +38,30 @@ const ContactPage = () => {
         return newErrors;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length === 0) {
             setIsSubmitting(true);
-            // Simulate API call
-            setTimeout(() => {
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData),
+                });
+
+                if (response.ok) {
+                    setSubmitted(true);
+                } else {
+                    const data = await response.json();
+                    alert(data.error || 'Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('Connection error. Please check your internet and try again.');
+            } finally {
                 setIsSubmitting(false);
-                setSubmitted(true);
-            }, 1500);
+            }
         } else {
             setErrors(validationErrors);
         }
