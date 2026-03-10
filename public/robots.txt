@@ -1,0 +1,30 @@
+# Robots.txt for Borneo Fashion Week
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json
+Disallow: /.next/
+Disallow: /private/
+Disallow: *?tab=*
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Block problematic bots
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://borneofashionweek.com/sitemap.xml
