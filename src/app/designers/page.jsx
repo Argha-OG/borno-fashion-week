@@ -128,20 +128,21 @@ const DesignersPage = () => {
     },
   ];
 
-  const pastWinners = [
-    "/assets/winners/WhatsApp Image 2026-03-27 at 8.56.41 PM (1).jpeg",
-    "/assets/winners/WhatsApp Image 2026-03-27 at 8.56.41 PM (2).jpeg",
-    "/assets/winners/WhatsApp Image 2026-03-27 at 8.56.41 PM.jpeg",
+  const winnersData = [
+    { year: "2025", image: "/assets/winners/2025.jpeg" },
+    { year: "2019", image: "/assets/winners/2019.jpeg" },
+    { year: "2018", image: "/assets/winners/2018.jpeg" },
+    { year: "2017", image: "/assets/winners/2017.jpeg" },
   ];
 
   return (
     <div className="pb-24 overflow-hidden">
       {/* Past Winners Section - AT TOP */}
-      <section className="mb-24 w-full">
+      <section className="mb-24 w-full px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12 pt-20 px-4"
+          className="text-center mb-16 pt-20 px-4"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tighter uppercase mb-4">
             Borneo Fashion Week <span className="text-gold">Past Winners</span>
@@ -149,28 +150,32 @@ const DesignersPage = () => {
           <div className="h-px w-24 bg-gold mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-8">
-          {pastWinners.map((image, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: idx * 0.2 }}
-              viewport={{ once: true }}
-              className="relative flex justify-center items-center overflow-hidden rounded-xl glassmorphism border-gold/10"
-            >
-              <img
-                src={image}
-                alt={`BFW Past Winner ${idx + 1}`}
-                className="w-full h-auto max-h-[70vh] object-contain group-hover:scale-105 transition-transform duration-1000"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <span className="text-gold text-[10px] font-bold tracking-[0.3em] uppercase">
-                  Past Winner
-                </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {winnersData.map((winner, idx) => (
+            <div key={idx} className="space-y-6">
+              <div className="flex items-center gap-4">
+                <h3 className="text-xl md:text-2xl font-bold text-white uppercase tracking-widest">
+                  Season <span className="text-gold">{winner.year}</span>
+                </h3>
+                <div className="h-px flex-1 bg-gold/30" />
               </div>
-            </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: (idx % 2) * 0.2 }}
+                viewport={{ once: true }}
+                className="relative flex justify-center items-center overflow-hidden rounded-3xl glassmorphism border-gold/10 group shadow-2xl"
+              >
+                <img
+                  src={winner.image}
+                  alt={`BFW Winner ${winner.year}`}
+                  className="w-full h-auto max-h-[80vh] object-contain group-hover:scale-105 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute inset-0 border-2 border-gold/0 group-hover:border-gold/10 transition-colors duration-500 rounded-3xl pointer-events-none" />
+              </motion.div>
+            </div>
           ))}
         </div>
       </section>

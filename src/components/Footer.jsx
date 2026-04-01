@@ -70,6 +70,9 @@ const Footer = () => {
                     <p className="text-xs text-white/40">
                         © {new Date().getFullYear()} Borneo Fashion Week. Organized by OneMediaGroup. All Rights Reserved.
                     </p>
+                    <p className="text-[10px] text-white/20 mt-4 tracking-widest uppercase">
+                        Developed by <a href="https://www.zynoxbit.com/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-gold transition-all duration-300">Zynoxbit</a>
+                    </p>
                 </div>
             </div>
         </footer>
