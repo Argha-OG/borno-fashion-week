@@ -39,7 +39,7 @@ const Footer = () => {
                         <div className="space-y-2">
                             <div className="flex items-center justify-center md:justify-start space-x-3 text-white/60 hover:text-gold transition-colors">
                                 <Mail size={16} className="text-gold" />
-                                <a href="mailto:sharawiasaad@gmail.com" className="text-sm">sharawiasaad@gmail.com</a>
+                                <a href="mailto:sharawiasaad@gmail.com" className="text-sm">Sharawi.onemediagroup@gmail.com</a>
                             </div>
                             <div className="flex items-center justify-center md:justify-start space-x-3 text-white/60 hover:text-gold transition-colors">
                                 <Phone size={16} className="text-gold" />

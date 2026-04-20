@@ -125,7 +125,7 @@ const ContactPage = () => {
                   href="mailto:sharawiasaad@gmail.com"
                   className="text-xl text-white hover:text-gold transition-colors font-medium"
                 >
-                  sharawiasaad@gmail.com
+                  Sharawi.onemediagroup@gmail.com
                 </a>
               </div>
             </div>
